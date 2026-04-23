@@ -2,9 +2,9 @@ import mysql.connector
 import os
 from dotenv import load_dotenv
 
-load_dontenv()
+load_dotenv()
 
-class Database():
+class Database:
     @staticmethod
     def get_connection():
         return mysql.connector.connect(
