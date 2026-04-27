@@ -16,3 +16,13 @@ class AuthController:
         except ValidationError as e:
             
             return False, e.errors()[0]['msg']
+        
+    def login (self, email, password):
+        try:
+            
+            usuario_login = UsuarioLogin(email = email, password = password)
+            
+            if sucess: 
+                return True, "Inicio de secion exitoso"
+        else:
+            return False, "Datos de inicio de sesion no validos"

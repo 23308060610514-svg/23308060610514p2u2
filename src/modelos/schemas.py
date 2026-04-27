@@ -13,3 +13,7 @@ class UsuarioSchema(BaseModel):
         prioridad: str = "media"
         clasificacion: str = "personal"
         
+class UsuarioLogin(BaseModel):
+    nombre: str = Field(min_length=8, max_length=100)
+    email: EmailStr
+    password: str = Field(min_length=8)
